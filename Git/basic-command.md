@@ -37,3 +37,14 @@ git config --global user.name <이름>
     - 일반적으로 `-m` 옵션을 넣어 메시지를 추가하여 등록
 
 
+## 원격저장소에 업로드하기
+
+- `remote add`
+    - `git remote add <원격저장소이름> <URL>`
+    - 일반적으로 `git remote add origin <URL>`
+    - 원격저장소 주소를 origin이라는 이름으로 저장 (한 번만 등록해두면 됨)
+
+- `push`
+    - `git push <원격저장소이름> <브랜치이름>`
+    - 일반적으로 `git push origin main`
+    - 원격저장소에 브렌치를 업로드
