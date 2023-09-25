@@ -25,13 +25,13 @@ git config --global user.name <이름>
 
 ## 코드 수정하고 저장소에 저장하기
 
-- `add`
+- `add` ★
     - `git add <파일/폴더이름>` 
     - `working directory`에서 `staging area`로 추가
     - 모든 파일, 폴더를 추가하기 위해 일반적으로 아래의 코드를 사용
         - `git add .`
 
-- `commit`
+- `commit` ★
     - `git commit -m "메시지"`
     - `staging area`에 올라간 파일들의 스냅샷을 찍어서 `.git directory`에 저장
     - 일반적으로 `-m` 옵션을 넣어 메시지를 추가하여 등록
@@ -44,7 +44,7 @@ git config --global user.name <이름>
     - 일반적으로 `git remote add origin <URL>`
     - 원격저장소 주소를 origin이라는 이름으로 저장 (한 번만 등록해두면 됨)
 
-- `push`
+- `push` ★
     - `git push <원격저장소이름> <브랜치이름>`
     - 일반적으로 `git push origin main`
     - 원격저장소에 브랜치를 업로드
