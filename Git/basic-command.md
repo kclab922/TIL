@@ -47,4 +47,4 @@ git config --global user.name <이름>
 - `push`
     - `git push <원격저장소이름> <브랜치이름>`
     - 일반적으로 `git push origin main`
-    - 원격저장소에 브렌치를 업로드
+    - 원격저장소에 브랜치를 업로드
