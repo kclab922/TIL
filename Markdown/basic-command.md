@@ -1,6 +1,6 @@
 # basic command
 
-**마크다운** 문법을 *학습*하기
+**마크다운** 문법 *학습*하기
 
 > 인용문구는 `>`를 쓴 후 작성
 
@@ -22,7 +22,7 @@
 ---
 
 ### 이미지 넣기
-1. `![alt text](<이미지주소>)`
+1. `![alt text](<복사한이미지주소>)`
 2. `![alt text](<이미지저장경로>)`
 
 ![Kiss by Klimt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlj3bCd7LFRKL7Pq723ZAVve9f7ovEHgNmpw&usqp=CAU)  
