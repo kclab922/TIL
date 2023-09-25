@@ -14,14 +14,23 @@
 - item
 - item
 
-python에서 출력하는 함수는 `print()`
+---
+
+### 링크 넣기
+[github](http://github.com)
 
 ---
 
-[구글](https://google.com)
-![라이언](https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg)
-![라이언](./assets/img.jpg)
+### 이미지 넣기
+1. `![alt text](<이미지주소>)`
+2. `![alt text](<이미지저장경로>)`
 
+![Kiss by Klimt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlj3bCd7LFRKL7Pq723ZAVve9f7ovEHgNmpw&usqp=CAU)  
+![Kiss by Klimt](./assets/images.jpeg)
+
+---
+
+python에서 출력하는 함수는 `print()`
 
 ```python
 def func():
