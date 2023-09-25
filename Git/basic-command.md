@@ -18,9 +18,22 @@ git config --global user.name <이름>
 
 ## git 상태 체크 
 
-- `git status`
+- `status`
+    - `git status`
     - 현재 git으로 관리되고 있는 파일/폴더의 상태를 출력
+
+
 ## 코드 수정하고 저장소에 저장하기
 
 - `add`
+    - `git add <파일/폴더이름>` 
+    - `working directory`에서 `staging area`로 추가
+    - 모든 파일, 폴더를 추가하기 위해 일반적으로 아래의 코드를 사용
+        - `git add .`
+
+- `commit`
+    - `git commit -m "메시지"`
+    - `staging area`에 올라간 파일들의 스냅샷을 찍어서 `.git directory`에 저장
+    - 일반적으로 `-m` 옵션을 넣어 메시지를 추가하여 등록
+
 
