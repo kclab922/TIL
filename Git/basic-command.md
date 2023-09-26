@@ -48,3 +48,16 @@ git config --global user.name <이름>
     - `git push <원격저장소이름> <브랜치이름>`
     - 일반적으로 `git push origin main` 사용
     - 원격저장소에 브랜치를 업로드
+
+
+## 원격저장소에서 다운로드하기
+
+- `pull`
+    - `git pull <원격저장소이름> <브랜치이름>`
+    - 일반적으로 `git pull origin main` 사용
+    - 원격저장소에서 브랜치로 다운로드
+
+- `clone`
+    - 다운로드할git접속-초록색Code버튼-URL복사
+    - 저장할 폴더에서 마우스오른쪽-Open Git Bash Here클릭-pwd로 위치확인-`git clone <URL>`입력-종료
+    - 폴더 들어가서 생성된 파일로 VSCode 열기 
