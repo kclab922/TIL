@@ -59,5 +59,11 @@ git config --global user.name <이름>
 
 - `clone`
     - 다운로드할git접속-초록색Code버튼-URL복사
-    - 저장할 폴더에서 마우스오른쪽-Open Git Bash Here클릭-pwd로 위치확인-`git clone <URL>`입력-종료
+    - 저장할 폴더에서 마우스오른쪽-Open Git Bash Here클릭-pwd로 위치확인-`git clone <URL>붙여넣기`입력-종료
     - 폴더 들어가서 생성된 파일로 VSCode 열기 
+
+- `fork`
+    pull ???
+
+
+    ## 코드 공유하기
