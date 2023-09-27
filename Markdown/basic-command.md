@@ -1,36 +1,77 @@
-# basic command
+# basic-command
+> 마크다운 문법 학습 
 
-**마크다운** 문법 *학습*하기
 
-> 인용문구는 `>`를 쓴 후 작성
+## Heading
+  - `# H1` 
+  - `## H2`
+  - `### H3`
+  - `#### H4`
+    - # H1 
+    - ## H2 
+    - ### H3
+    - #### H4
 
-1. 첫번째항목
-    1. 하위항목
-2. 두번째항목
-3. 세번째항목
 
-- item
-    - 하위항목
-- item
-- item
+## Bold
+- `**bold text**` 
+    - **bold text**
 
----
 
-### 링크 넣기
-[github](http://github.com)
+## Italic
+- `*italicized text*`
+    - *italicized text*
 
----
 
-### 이미지 넣기
+## Blockquote
+- `> blockquote`
+    - > blockquote
+
+
+## Ordered List
+- `1. First item`
+- `2. Second item`
+- `3. Third item`
+    1. First item
+    2. Second item
+    3. Third item
+
+
+## Unordered List
+- `- First item`
+- `- Second item`
+- `- Third item`
+    - First item
+    - Second item
+    - Third item
+
+
+## Code
+- `'code'`
+    - `code`
+
+
+## Horizontal Rule
+- `---`
+    - ---
+
+
+## Link
+- `[title](https://www.example.com)`
+    - [title](https://www.example.com)
+- eg. `[github](https://github.com)`
+    - [github](https://github.com)
+
+
+## Image
 1. `![alt text](<복사한이미지주소>)`
 2. `![alt text](<이미지저장경로>)`
+    - 1. ![Kiss by Klimt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlj3bCd7LFRKL7Pq723ZAVve9f7ovEHgNmpw&usqp=CAU)  
+    - 2. ![Kiss by Klimt](./assets/images.jpeg)
 
-![Kiss by Klimt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlj3bCd7LFRKL7Pq723ZAVve9f7ovEHgNmpw&usqp=CAU)  
-![Kiss by Klimt](./assets/images.jpeg)
 
----
-
-python에서 출력하는 함수는 `print()`
+## Fenced Code Block
+- ` ``` contents ``` `
 
 ```python
 def func():
