@@ -68,7 +68,7 @@
 ## Image
 - 1. `![alt text](<이미지주소복사+붙여넣기>)`
 - 2. `![alt text](<이미지저장경로>)`
-- 이때 이미지 확장자는 `.jpg/.jpeg` 가 아닐 경우 오류 발생 가능
+- 이때 이미지 확장자는 `.jpg/.jpeg` 가 아닐 경우 오류 발생 가능성 있음
 
     - 1. ![Kiss by Klimt](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlj3bCd7LFRKL7Pq723ZAVve9f7ovEHgNmpw&usqp=CAU)  
     - 2. ![Kiss by Klimt](./assets/images.jpeg)
