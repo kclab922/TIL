@@ -242,7 +242,7 @@ True
 2. comparing strings
 ```python
 print('hi' == 'hi')
-print('hi' != 'hi')
+print('hi' != 'hi')``
 ```
 ```
 True
@@ -264,9 +264,19 @@ False
 False
 False
 ```
-
-
-2. or : 양쪽 모두 거짓일 때만 거짓 = 양편 중 하나라도 참이면 참
+2. or : 양쪽 모두 거짓일 때만 거짓 (양편 중 하나라도 참이면 참)
+```python
+print(True or True)
+print(True or False)
+print(False or True)
+print(False or False)
+```
+```
+True
+True
+True
+False
+```
 
 3. not : 값을 반대로 전환
 
