@@ -251,7 +251,9 @@ False
 
 ### 2.3 논리연산자
 
-1. and : 양쪽 모두 참일 때만 참 (양편 중 하나라도 거짓이면 거짓)
+
+1. and
+- 양쪽 모두 참일 때만 참 (양편 중 하나라도 거짓이면 거짓)
 ```python
 print(True and True)
 print(True and False)
@@ -264,7 +266,23 @@ False
 False
 False
 ```
-2. or : 양쪽 모두 거짓일 때만 거짓 (양편 중 하나라도 참이면 참)
+- 단축평가
+    - 0 = F / 1,2,3,4,... = T
+```python
+print(3 and 5) #뒤의 값
+print(3 and 0) #뒤의 값
+print(0 and 5) #앞의 값
+print(0 and 0) #앞의 값
+```
+```
+5
+0
+0
+0
+```
+
+2. or
+- 양쪽 모두 거짓일 때만 거짓 (양편 중 하나라도 참이면 참)
 ```python
 print(True or True)
 print(True or False)
@@ -277,10 +295,78 @@ True
 True
 False
 ```
+- 단축평가
+    - 0 = F / 1,2,3,4,... = T
+```python
+print(3 or 5) #앞의 값
+print(3 or 0) #앞의 값
+print(0 or 5) #뒤의 값
+print(0 or 0) #뒤의 값
+print(None or 'index.html') #뒤의 값
+print('login.html' or 'index.html') #앞의 값
+
+```
+```
+3
+3
+5
+0
+'index.html'
+login.html
+```
 
 3. not : 값을 반대로 전환
+```python
+print(True)
+print(not True)
+print(False)
+print(not False)
+
+a = True
+print(not a)
+```
+```
+True
+False
+False
+True
+False
+```
+
 
 ### 2.4 복합연산자
+```python
+a = 2
+b = 3
+
+#오른쪽 값을 a에 할당하기
+a = a + b 
+a = a - b
+a = a * b
+a = a / b
+a = a // b
+a = a % b
+a = a ** b
+print(a)
+```
+```
+0.0 
+```
+- 축약형
+```python
+a += b
+a -= b
+a *= b
+a /= b
+a //= b
+a %= b
+a **= b
+print(a)
+```
+```
+0.0 
+```
+
 ### 2.5 기타연산자
 
 ## 3. 형변환
