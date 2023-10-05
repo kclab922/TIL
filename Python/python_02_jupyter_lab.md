@@ -587,8 +587,86 @@ type(int(a))
 ValueError: invalid literal for int() with base 10: '3.3'
 ```
 
+
 ## 4. 시퀀스(sequence) 자료형
+- 시퀀스 : 데이터의 순서대로 나열된 자료구조 (순서대로 나열되어있다는 것은 정렬된 것과는 다르다.)
+1. 리스트(list)
+2. 튜플(tuple)
+3. 레인지(range)
+4. 문자열(string)
+
 ### 4.1 List
+- 선언 : 변수이름 = [value1, value2, value3]
+- 접근 : 변수이름[index]
+- basic form
+```python
+l = []
+print(l)
+print(type(l))
+```
+```
+[]
+<class 'list'>
+```
+
+- 선언
+```python
+location = ['서울', '대전', '부산']
+
+print(location)
+print(type(location))
+```
+```
+['서울', '대전', '부산']
+<class 'list'>
+```
+
+- 접근_1
+```python
+location = ['서울', '대전', '부산']
+
+print(location[0])
+print(location[1])
+print(location[2])
+
+print(location[-3])
+print(location[-2])
+print(location[-1])
+```
+```
+서울
+대전
+부산
+
+서울
+대전
+부산
+```
+
+- 접근_2_(error)
+```python
+location = ['서울', '대전', '부산']
+
+print(location[3])
+print(location[-4])
+```
+```
+IndexError: list index out of range
+IndexError: list index out of range
+```
+
+- 접근_3_(데이터 바꾸기)
+```python
+location = ['서울', '대전', '부산']
+location[2] = 'LA'
+
+print(location)
+```
+```
+['서울', '대전', '제주']
+```
+
+
 ### 4.2 Tuple
 ### 4.3 range
 ### 4.4 string
