@@ -21,6 +21,7 @@
 - 이전 코드 전체 비활성화 : 상단 탭 - `Kernel`- `Restart Kernel and Clear Outputs of All Cells`
 
 
+# Python_intro
 
 ## 1. 변수
 
@@ -596,8 +597,8 @@ ValueError: invalid literal for int() with base 10: '3.3'
 4. 문자열(string)
 
 ### 4.1 List
-- 선언 : 변수이름 = [value1, value2, value3]
-- 접근 : 변수이름[index]
+1. 선언 : 변수이름 = [value1, value2, value3]
+2. 접근 : 변수이름[index]
 - basic form
 ```python
 l = []
@@ -655,7 +656,7 @@ IndexError: list index out of range
 IndexError: list index out of range
 ```
 
-- 접근_3_(데이터 바꾸기)
+- 접근_3_(value 수정)
 ```python
 location = ['서울', '대전', '부산']
 location[2] = 'LA'
@@ -668,6 +669,69 @@ print(location)
 
 
 ### 4.2 Tuple
+1. 선언 : 변수이름 = (value1, value2, value3)
+2. 접근 : 변수이름[index]
+3. List와 유사하지만 value가 수정불가능(immutable)하다.
+
+- basic form
+```python
+t = (1, 2, 3)
+
+print(t)
+print(type(t))
+print(t[2])
+```
+```
+(1, 2, 3)
+<class 'tuple'>
+3
+```
+
+- eg_1_(error: occurring because tuple is immutable)
+```python
+t = (1, 2, 3)
+t[2] = 100
+```
+```
+TypeError: 'tuple' object does not support item assignment
+```
+
+- eg_2
+```python
+result = divmod(9, 4)
+
+print(result)
+print(type(result))
+print(resutl[0])
+print(resutl[1])
+```
+```
+(2, 1)
+<class 'tuple'>
+2
+1
+```
+
+<!-- QnA : `x, y`는 튜플 형태인데, 결과값이 왜 `(1, 2)`가 아니라 `1 2`와 같은 정수의 단순 나열로 나오나요? -->
+- eg_3
+```python
+x, y = (1, 2)
+print(x, y)
+```
+```
+1 2
+```
+
+- eg_4
+```python
+x, y = (1, 2)
+x, y = (y, x)
+print(x, y)
+```
+```
+2 1
+```
+
 ### 4.3 range
 ### 4.4 string
 ### 4.5 시퀀스에서 사용 가능한 연산/함수
