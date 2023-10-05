@@ -369,6 +369,60 @@ print(a)
 
 ### 2.5 기타연산자
 
+1. concatenation (글자 연결)
+- 글자데이터를 가지고 연산
+- 연산자가 연결하는 데이터들은 같은 종류여야 함 (글자끼리, 숫자끼리 등)
+```python
+a = 'hi'
+b = 'hello'
+print(a + b)
+print(a + 1) #error code
+```
+```
+hihello
+TypeError: can only concatenate str (not "int") to str
+```
+
+2. containment (포함 확인)
+```python
+print('a' in 'apple')
+print('z' in 'apple')
+print(1 in [1, 2, 3])
+print(100 in [1, 2, 3])
+```
+```
+True
+False
+True
+False
+```
+
+3. is (양쪽 데이터의 위치가 같은지 확인)
+```python
+# 데이터들의 메모리 주소가 서로 다른 상황
+a = 123123
+b = 123123
+print(a is b) 
+# 데이터들의 메모리 주소가 같은 상황 (계산의 용이성을 위해 미리 할당해둔 숫자들이므로)
+a = 256
+b = 256
+print(a is b)
+```
+```
+False
+True
+```
+
+### 2.6 연산자 우선순위
+0. `( )`로 그룹핑한 연산
+1. 산술연산자  `**`
+2. 산술연산자 `*`, `/`
+3. 산술연산자 `+`, `-`
+4. 비교연산자 `is`, `in`
+5. `not`
+6. `and`, `or`
+
+
 ## 3. 형변환
 ### 3.1 암시적 형변환(자동으로 알아서 바뀜)
 ### 3.2 
@@ -382,3 +436,11 @@ print(a)
 
 ## 5. 시퀀스(sequence) 데이터가 아닌 자료구조
 ### 5.1 set
+
+
+
+**gitignore
+git으로 관리하는 경우, 폴더 만들자마자 바로 
+1. `.gitignore` 파일 만들기
+2. `gitignore.io` 사이트 접속
+3. 내용 다운로드 
