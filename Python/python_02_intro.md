@@ -1,27 +1,41 @@
-# Jupyter_Lab
-
-
-## 설치/실행/종료
-- 구글에 jupyter 검색 - jupyterlab 설치 
-- 폴더 생성 - 폴더 내 git bash 창에 pip install jupyterlab 입력 
-- jupyter lab 입력하여 제대로 설치됐는지 확인 및 실행
-- 'notebook' 만들기
-- ctrl+C + ctrl+X (종료 안될 시 작업관리자에서 jupyter 종료)
-- 실행중에 terminal 끄면 안 됨 ★
-
-
-## 동작
-- 한 셀에 여러 명령 입력시 `print()`문 사용
-- ctrl + enter  : 지금 셀 실행
-- shift + enter : 지금 셀 실행 + 아래로 이동
-- alt + enter   : 지금 셀 실행+ 아래에 새로운 셀 추가
-- enter : 셀 활성화 
-- esc : 셀 이동 활성화 
-- drag and drop : 셀 줄 이동 가능
-- 이전 코드 전체 비활성화 : 상단 탭 - `Kernel`- `Restart Kernel and Clear Outputs of All Cells`
-
-
 # Python_intro
+
+## 0. 목차
+1. 변수
+    1. Number
+    2. Boolean
+    3. None
+    4. String
+2. 연산자
+    1. 산술연산자
+    2. 비교연산자
+    3. 논린연산자
+    4. 복합연산자
+    5. 기타연산자
+    6. 연산자 우선순위
+3. 형변환
+    1. 암시적 형변환
+    2. 명시적 형변환
+4. 자료구조1: 시퀀스(sequence) 자료형
+    1. List(배열)
+    2. Tuple
+    3. Range
+    4. String
+    5. 시퀀스에서 사용 가능한 연산/함수
+        1. indexing
+        2. slicing
+        3. in
+        4. not in
+        5. concatenation
+        6. *
+        7. leng
+        8. min
+        9. max
+        10. count
+5. 자료구조2: 시퀀스가 아닌 자료형
+    1. set
+    2. dictionary
+
 
 ## 1. 변수
 
@@ -589,7 +603,7 @@ ValueError: invalid literal for int() with base 10: '3.3'
 ```
 
 
-## 4. 시퀀스(sequence) 자료형
+## 4. 자료구조1: 시퀀스(sequence) 자료형
 - 시퀀스 : 데이터의 순서대로 나열된 자료구조 (순서대로 나열되어있다는 것은 정렬된 것과는 다르다.)
 1. 리스트(list)
 2. 튜플(tuple)
@@ -788,11 +802,93 @@ print(r[1])
 
 
 ### 4.5 시퀀스에서 사용 가능한 연산/함수
+1. indexing
+- 형태: [n]
+- 의미: n번째 데이터에 접근
+
+```python
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (11, 22, 33, 44, 55)
+my_range = range(1, 10, 2)
+my_string = '일이삼사오'
+
+print(my_list[1])
+print(my_tuple[1])
+print(my_range[1])
+print(my_string[1])
+```
+```
+2
+22
+3
+이
+```
+
+2. slicing
+- 형태: [n:m] / [n:m:s]
+- 의미: n번째 이상부터 m번째 미만까지 (s간격으로) 나열
+
+- eg_1 
+```python
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (11, 22, 33, 44, 55)
+my_range = range(1, 10, 2)
+my_string = '일이삼사오'
+
+print(my_list[1:3])
+print(my_tuple[1:3])
+print(my_range[1:3])
+print(my_string[1:3])
+```
+```
+[2, 3]
+(22, 33)
+range(3, 7, 2) 
+이삼
+```
+
+- eg_2 
+```python
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (11, 22, 33, 44, 55)
+my_range = range(1, 10, 2)
+my_string = '일이삼사오'
+
+print(my_list[1:4:2])
+print(my_range[2:7:2]) @@QnA
+```
+```
+[2, 4]
+range(5, 11, 4) @@QnA
+```
+
+3. in
+```python
+```
+```
+```
+
+4. not in
+
+5. concatenation
+
+6. *
+
+7. len
+
+8. min
+
+9. max
+
+10. count
 
 
 
 
-## 5. 시퀀스(sequence) 데이터가 아닌 자료구조
+## 5. 자료구조2: 시퀀스(sequence) 데이터가 아닌 자료구조
 ### 5.1 set
+
+### 5.2 dictionary
+
 
 
