@@ -7,7 +7,11 @@
 git config --global user.email <이메일>
 git config --global user.name <이름>
 ```
-
+- gitignore
+    - git으로 관리하는 경우, 폴더 만들자마자 바로 
+    1. VScode 실행하여 `.gitignore` 파일 만들기
+    2. `gitignore.io` 사이트 접속
+    3. 내용 다운로드 
 
 ## git 저장소 만들기
 

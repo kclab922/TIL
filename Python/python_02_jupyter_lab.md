@@ -424,8 +424,168 @@ True
 
 
 ## 3. 형변환
+
 ### 3.1 암시적 형변환(자동으로 알아서 바뀜)
-### 3.2 
+```python
+a = True
+b = False
+c = 1
+
+print(a + c)
+print(b + c)
+```
+```
+2
+1
+```
+
+```python
+int_num = 3
+float_num = 3.3
+complex_num = 3 + 3j
+
+print(int_num + float_num)
+print(int_num + complex_num)
+```
+```
+6.3
+(6+3j)
+```
+
+### 3.2 명시적 형변환
+
+1. change to `int`
+```python
+a = 1
+b1 = 'string'
+b2 = '100'
+c1 = True
+c2 = False
+
+print(int(a))
+print(int(b1))
+print(int(b2))
+print(int(c1))
+print(int(c2))
+```
+```
+1
+ValueError: invalid literal for int() with base 10: 'string'
+100
+1
+0
+```
+
+2. change to `str`
+```python
+a = 1
+b = 'string'
+c1 = True
+c2 = False
+
+print(str(a))
+print(str(b))
+print(str(c1))
+print(str(c2))
+```
+```
+1
+string
+True
+False
+```
+
+3. change to `bool`
+```python
+a1 = 1
+a2 = 0
+a3 = 100
+b1 = 'string'
+b2 = not 'string'
+c1 = True
+c2 = False
+
+print(bool(a1))
+print(bool(a2))
+print(bool(a3))
+print(bool(b1))
+print(bool(b2))
+print(bool(c1))
+print(bool(c2))
+
+print(bool(''))
+print(boole([]))
+
+print(bool('apple'))
+print(bool([1, 2, 3]))
+```
+```
+True
+False
+True
+True
+False
+True
+False
+
+False
+False
+
+True
+True
+```
+
+- eg 1-1
+```python
+a = 1
+b = '번'
+str(a) + b
+```
+```
+1번
+```
+
+- eg 1-2 (error)
+```python
+a = 1
+b = '번'
+a + b
+```
+```
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+- eg 2
+```python
+age = int(input())
+    (inputbox) 11
+
+print(type(age))
+```
+```
+<class 'int'>
+```
+
+- eg 3-1
+```python
+a = '3.3'
+
+type(float(a))
+```
+```
+float
+```
+
+
+- eg 3-2 (error)
+```python
+a = '3.3'
+
+type(int(a))
+```
+```
+ValueError: invalid literal for int() with base 10: '3.3'
+```
 
 ## 4. 시퀀스(sequence) 자료형
 ### 4.1 List
@@ -438,9 +598,3 @@ True
 ### 5.1 set
 
 
-
-**gitignore
-git으로 관리하는 경우, 폴더 만들자마자 바로 
-1. `.gitignore` 파일 만들기
-2. `gitignore.io` 사이트 접속
-3. 내용 다운로드 
