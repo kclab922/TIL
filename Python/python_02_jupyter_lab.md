@@ -732,9 +732,65 @@ print(x, y)
 2 1
 ```
 
+
 ### 4.3 range
+
+1. 선언_1 : `range(n)` 0부터 n-1까지의 범위
+```python
+r = range(5)
+print(r)
+print(type(r))
+```
+```
+range(0, 5)
+<class 'range'>
+```
+
+2. 선언_2 : `range(n, m)` n부터 m-1까지의 범위
+```python
+r = range(0, 5)
+print(r)
+```
+```
+range(0, 5)
+```
+
+3. 선언_3 : `range(n, m, s)` n부터 m-1까지의 범위 (각 value가 +s 만큼 증가)
+```python
+r = range(0, 5, 2)
+print(r)
+```
+```
+range(0, 5, 2)
+```
+
+4. making list
+```python
+r = range(5, 15, 2)
+print(list(r))
+```
+```
+[5, 7, 9, 11, 13]
+```
+
+5. 접근
+```python
+r = range(5, 15, 2)
+print(r[1])
+```
+```
+7
+```
+
+
 ### 4.4 string
+- 기본 데이터 구조 참고
+
+
 ### 4.5 시퀀스에서 사용 가능한 연산/함수
+
+
+
 
 ## 5. 시퀀스(sequence) 데이터가 아닌 자료구조
 ### 5.1 set
