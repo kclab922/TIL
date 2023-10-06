@@ -1,7 +1,7 @@
 # Python_intro
 
 ## 0. 목차
-1. 변수
+1. 변수 (데이터 타입)
     1. Number
     2. Boolean
     3. None
@@ -9,7 +9,7 @@
 2. 연산자
     1. 산술연산자
     2. 비교연산자
-    3. 논린연산자
+    3. 논리연산자
     4. 복합연산자
     5. 기타연산자
     6. 연산자 우선순위
@@ -22,22 +22,12 @@
     3. Range
     4. String
     5. 시퀀스에서 사용 가능한 연산/함수
-        1. indexing
-        2. slicing
-        3. in
-        4. not in
-        5. concatenation
-        6. *
-        7. leng
-        8. min
-        9. max
-        10. count
 5. 자료구조2: 시퀀스가 아닌 자료형
     1. set
     2. dictionary
 
 
-## 1. 변수
+## 1. 변수 (데이터 타입)
 
 - 변수이름 `=` 값
     ```python
@@ -825,63 +815,157 @@ print(my_string[1])
 ```
 
 2. slicing
-- 형태: [n:m] / [n:m:s]
+- 형태: [n:m] or [n:m:s]
 - 의미: n번째 이상부터 m번째 미만까지 (s간격으로) 나열
 
-- eg_1 
 ```python
 my_list = [1, 2, 3, 4, 5]
 my_tuple = (11, 22, 33, 44, 55)
-my_range = range(1, 10, 2)
+my_range = range(1, 10, 2) 
 my_string = '일이삼사오'
 
 print(my_list[1:3])
 print(my_tuple[1:3])
-print(my_range[1:3])
+print(my_range[1:3]) # QnA
 print(my_string[1:3])
+
+print(my_list[1:4:2]) 
+print(my_range[2:7:2]) # QnA
+
+print(my_list[ :3]) 
+print(my_list[3: ]) 
 ```
 ```
 [2, 3]
 (22, 33)
-range(3, 7, 2) 
+range(3, 7, 2)
 이삼
+
+[2, 4]
+range(5, 11, 4)
+
+[1, 2, 3]
+[4, 5]
 ```
 
-- eg_2 
+
+3. in
+- 어떤 글자가 해당 범위에 들어있는지 확인
+
 ```python
 my_list = [1, 2, 3, 4, 5]
 my_tuple = (11, 22, 33, 44, 55)
-my_range = range(1, 10, 2)
+my_range = range(1, 10, 2) 
 my_string = '일이삼사오'
 
-print(my_list[1:4:2])
-print(my_range[2:7:2]) @@QnA
+print(11 in my_list)
+print(11 in my_tuple)
+print(1 in my_range)
+print('일' in my_string)
 ```
 ```
-[2, 4]
-range(5, 11, 4) @@QnA
-```
-
-3. in
-```python
-```
-```
+False
+True
+True
+True
 ```
 
 4. not in
+- 어떤 글자가 해당 범위에 들어있지 '않은지' 확인
+```python
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (11, 22, 33, 44, 55)
+my_range = range(1, 10, 2) 
+my_string = '일이삼사오'
 
-5. concatenation
+print(11 not in my_list)
+print(100 not in my_tuple)
+print(1 not in my_range)
+print('구' not in my_string)
+```
+```
+True
+True
+False
+True
+```
 
-6. *
+5. concatenation (연결)
+```python
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (11, 22, 33, 44, 55)
 
-7. len
+print(my_list + [6, 7, 8, 9, 10])
+print(my_tuple + (66, 77, 88))
+```
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+(11, 22, 33, 44, 55, 66, 77, 88)
+```
 
-8. min
 
-9. max
 
-10. count
+6. `*` (반복)
+```python
+my_list = [1, 2, 3, 4, 5]
+my_string = '일이삼사오'
 
+print(my_string * 3)
+print(my_list * 3)
+
+print([0] * 3)
+print([[0] * 3] * 3)
+```
+```
+일이삼사오일이삼사오일이삼사오
+[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+[0, 0, 0]
+[[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+```
+
+7. len (길이: 전체 데이터의 개수)
+```python
+my_list = [1, 2, 3, 4, 5]
+
+len(my_list)
+```
+```
+5
+```
+
+
+8. count (특정 데이터의 개수)
+```python
+my_list = [1, 2, 3, 4, 5]
+
+my_list.count(1)
+```
+```
+1
+```
+
+
+9. min
+```python
+my_tuple = (11, 22, 33, 44, 55)
+
+min(my_tuple)
+```
+```
+11
+```
+
+
+10. max
+```python
+my_range = range(1, 10, 2) 
+
+max(my_range)
+```
+```
+9
+```
 
 
 
