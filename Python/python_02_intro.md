@@ -968,11 +968,76 @@ max(my_range)
 ```
 
 
-
 ## 5. 자료구조2: 시퀀스(sequence) 데이터가 아닌 자료구조
+
 ### 5.1 set
 
+- 선언: 변수이름 = {value1, value2}
+- 수학의 집합과 동일하게 처리 
+```python
+my_set_a = {1, 2, 3, 4, 5}
+my_set_b = {1, 3, 5, 7, 9}
+
+print(my_set_a - my_set_b) # 차집합
+print(my_set_a | my_set_b) # 합집합
+print(my_set_a & my_set_b) # 교집합
+```
+```
+{2, 4}
+{1, 2, 3, 4, 5, 7, 9}
+{1, 3, 5}
+```
+
+- 중복되는 값이 없음
+```python
+my_list = [1, 2, 3, 1, 4, 1, 2, 3, 5, 2]
+print(set(my_list))
+```
+```
+[1, 2, 3, 4, 5]
+```
+
+
 ### 5.2 dictionary
+- 선언 : 변수이름 = {key1: value1, key2: value2, key3: value3}
 
+- 접근 : 변수이름[key]
+```python
+my_dict = {'서울': '02', '경기': '031'}
+my_dict['서울']
+```
+```
+'02'
+```
 
+- dictionary는 key와 value의 쌍
+    1. key: immutable한 모든 값을 사용 가능. (불변값인 string, integer, ..)
+    2. value: 모든 데이터 사용 가능. (list, dict도 가능)
 
+```python
+dict_a = {
+    'name': 'changhee',
+    'age': 10,
+    'location': 'seoul',
+    'numbers': [1, 2, 3, 4, 5],
+    'friends': {
+        'a': 10,
+        'b': 11,
+    },
+}
+
+print(dict_a['age'])
+print(dict_a['numbers'][3])
+print(dict_a['friends']['b'])
+
+print(dict_a.keys())
+print(dict_a.values())
+```
+```
+10
+4
+11
+
+dict_keys(['name', 'age', 'location', 'numbers', 'friends'])
+dict_values(['changhee', 10, 'seoul', [1, 2, 3, 4, 5], {'a': 10, 'b': 11}])
+```
