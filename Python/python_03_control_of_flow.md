@@ -93,7 +93,13 @@ else:
 
 - 예제
 ```python
-score = input()
+# 90점이상 A (95이상이라면 good 추가)
+# 80점이상 B
+# 70점이상 C
+# 나머지 F
+
+score = int(input())
+    (input_box) 95
 if score >= 90:
     print('A')
     if score >= 95:
@@ -104,4 +110,8 @@ elif score >= 70:
     print('C')
 else:
     print('F')
+```
+```
+A
+good
 ```
