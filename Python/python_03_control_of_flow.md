@@ -93,5 +93,15 @@ else:
 
 - 예제
 ```python
-if 
+score = input()
+if score >= 90:
+    print('A')
+    if score >= 95:
+        print('good')
+elif score >= 80:
+    print('B')
+elif score >= 70:
+    print('C')
+else:
+    print('F')
 ```
