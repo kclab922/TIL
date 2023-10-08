@@ -123,8 +123,65 @@ good
 - eg_1
 
 ```python
+# 조건표현식 ver.
 print('True') if 1 < 0 else print('False')
 print('True') if 1 < 2 else print('False')
 
-if 1 
+# 조건문 ver.
+if 1 < 0:
+    print('True')
+else:
+    print('False')
+
+if 1 < 2:
+    print('True')
+else:
+    print('False')
+```
+```
+False
+True
+False
+True
+```
+
+- eg_2
+
+```python
+# 조건표현식 ver.
+num = -5
+value = num if num >= 0 else 0
+print(value)
+
+# 조건문 ver. 
+num = -5
+if num >= 0:
+    value = num
+else:
+    value = 0
+print(value)
+```
+```
+0
+0
+```
+
+- eg_3
+```python
+# 조건표현식 ver.
+num = 10
+result = '홀수' if num % 2 == 1 else '짝수'
+print(result)
+
+# 조건문 ver. 
+num = 10
+if num % 2 == 1 : 
+    result = '홀수'
+else:
+    result = '짝수'
+print(result)
+```
+```
+짝수
+짝수
 ```
