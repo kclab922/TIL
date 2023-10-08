@@ -121,3 +121,10 @@ good
 - 형식: true_value if <조건식> else false_value
 
 - eg_1
+
+```python
+print('True') if 1 < 0 else print('False')
+print('True') if 1 < 2 else print('False')
+
+if 1 
+```
