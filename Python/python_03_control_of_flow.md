@@ -10,7 +10,8 @@
 2. 반복문
     1. while문
     2. for문
-    3. dictionary 반복
+        1. sequence형 데이터의 반복
+        2. dictionary 반복
     4. break
     5. continue
     6. else
@@ -243,7 +244,8 @@ for variable in sequence:
 # variable : sequence 집합에서 꺼내온 데이터
 ```
 
-#### (1) list
+#### (1) sequence형 데이터의 반복
+1. list
 ```python
 # numbers 집합에서 데이터들을 하나씩 꺼내오는 상황
 numbers = [1, 2, 3, 4, 5]
@@ -259,7 +261,7 @@ for number in numbers:
 5
 ```
 
-#### (2) string
+2. string
 ```python
 word = input('단어를 입력하세요 : ')
 
@@ -276,7 +278,7 @@ l
 e
 ```
 
-#### (3) range
+3. range
 ```python
 for i in range(5):
     print(i)
@@ -288,7 +290,8 @@ for i in range(5):
 3
 4
 ```
-#### (4) tuple
+
+4. tuple
 ```python
 for i in (1, 2, 3, 4, 5):
     print(i)
@@ -301,7 +304,7 @@ for i in (1, 2, 3, 4, 5):
 5
 ```
 
-- 예제_1
+5. 예제_1
 ```python
 # 1. 1~30까지 숫자 중 홀수만 출력
 numbers = range(31)
@@ -341,7 +344,7 @@ print(result)
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]
 ```
 
-- 예제_2
+6. 예제_2
 ```python
 menus = ['라면', '김밥', '떡볶이']
 
@@ -361,12 +364,21 @@ for i in range(3):
 떡볶이
 ```
 
-- 예제_3
+7. 예제_3
 ```python
 menus = ['라면', '김밥', '떡볶이', '돈까스', '튀김']
+
 for menu in menus:
     print(menu)
 
+for i in range(3):
+    print(menus[i])
+
+for i in range(len(menus)):
+    print(menus[i])
+
+for item in enumerate(menus):
+    print(item)
 ```
 ```
 라면
@@ -374,4 +386,102 @@ for menu in menus:
 떡볶이
 돈까스
 튀김
+
+라면
+김밥
+떡볶이
+
+라면
+김밥
+떡볶이
+돈까스
+튀김
+
+(0, '라면')
+(1, '김밥')
+(2, '떡볶이')
+(3, '돈까스')
+(4, '튀김')
 ```
+
+#### (2) dictionary 반복
+
+1. for key in dict:
+
+```python
+# eg_1
+
+info = {
+    'name': 'hauen'
+    'location': 'incheon'
+    'phone': '010-4728-8208'
+}
+
+for key in info:
+    print(key)
+    print(info[key])
+```
+```
+name
+location
+phone
+
+hauen
+incheon
+010-4728-8208
+```
+
+```python
+# eg_2
+
+blood_type = {
+    'A': 5,
+    'B': 4,
+    'O': 2,
+    'AB': 3,
+}
+
+print('bloodtype is as below')
+for key in blood_type:
+    print(key)
+```
+```
+bloodtype is as below
+A
+B
+O
+AB
+```
+
+2. for key in dict.keys():
+```python
+blood_type = {
+    'A': 5,
+    'B': 4,
+    'O': 2,
+    'AB': 3,
+}
+
+print('bloodtype is as below')
+for key in dict.keys():
+    print(key)
+
+print(blood_type.keys())
+```
+```
+bloodtype is as below
+A
+B
+O
+AB
+
+dict_keys(['A', 'B', 'O', 'AB'])
+```
+
+3. for value in dict.values():
+
+
+
+
+
+4. for key, value in dict.items():
