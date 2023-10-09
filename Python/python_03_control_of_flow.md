@@ -244,6 +244,21 @@ for variable in sequence:
 ```
 
 #### (1) list
+```python
+# numbers 집합에서 데이터들을 하나씩 꺼내오는 상황
+numbers = [1, 2, 3, 4, 5]
+
+for number in numbers: 
+    print(number)
+```
+```
+1
+2
+3
+4
+5
+```
+
 #### (2) string
 #### (3) range
 #### (4) tuple
