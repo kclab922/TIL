@@ -301,7 +301,7 @@ for i in (1, 2, 3, 4, 5):
 5
 ```
 
-- 예제
+- 예제_1
 ```python
 # 1. 1~30까지 숫자 중 홀수만 출력
 numbers = range(31)
@@ -339,4 +339,39 @@ print(result)
 29
 
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]
+```
+
+- 예제_2
+```python
+menus = ['라면', '김밥', '떡볶이']
+
+for menu in menus:
+    print(menu)
+
+for i in range(3):
+    print(menus[i])
+```
+```
+라면
+김밥
+떡볶이
+
+라면
+김밥
+떡볶이
+```
+
+- 예제_3
+```python
+menus = ['라면', '김밥', '떡볶이', '돈까스', '튀김']
+for menu in menus:
+    print(menu)
+
+```
+```
+라면
+김밥
+떡볶이
+돈까스
+튀김
 ```
