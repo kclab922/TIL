@@ -260,5 +260,21 @@ for number in numbers:
 ```
 
 #### (2) string
+```python
+word = input('단어를 입력하세요 : ')
+
+for char in word:
+    print(char)
+
+(input_box) apple
+```
+```
+a
+p
+p
+l
+e
+```
+
 #### (3) range
 #### (4) tuple
