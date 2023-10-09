@@ -200,3 +200,33 @@ while <조건식>:
     2. True일 때는 아래 실행할 코드 실행 >> 다시 while문으로 올라가 조건식 판별 
     3. 만약 False로 바뀐다면? >> 아래 코드로 넘어가지 못하고 while문 종료 (whilie문 탈출)
 - 이때 코드가 무한루프에 빠지지 않도록 탈출코드를 넣어서 반복문을 작성해야 함. 
+
+- eg_1
+
+```Python
+a = 0
+while a < 5:
+    print(a)
+    a += 1
+```
+```
+0
+1
+2
+3
+4
+```
+
+- eg_2
+```python
+greeting = ''
+while greeting != 'hi':
+    greeting = input('say hi : ')
+
+(input_box) hello
+(input_box) hi
+```
+```
+say hi : hello
+say hi : hi
+```
