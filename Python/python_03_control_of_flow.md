@@ -230,3 +230,20 @@ while greeting != 'hi':
 say hi : hello
 say hi : hi
 ```
+
+
+### 2. for문
+- 정해진 범위 내의 반복
+- 형식
+```python
+for variable in sequence:
+    실행할 코드 
+    
+# sequence : 순서로 만들어진 여러 개의 집합. (sequence 4가지 중 하나 아무거나 넣을 수 있음)
+# variable : sequence 집합에서 꺼내온 데이터
+```
+
+#### (1) list
+#### (2) string
+#### (3) range
+#### (4) tuple
