@@ -414,12 +414,195 @@ None
 
 8. list copy
 
+- `copy_list` 변경 시 `origin_list`도 같이 변경 
 
+1. eg_1
+```python
+origin_list = [1, 2, 3]
+copy_list = origin_list
+
+copy_list[0] = 100 
+
+print(origin_list)
+print(copy_list)
+```
+```
+[100, 2, 3]
+[100, 2, 3]
+```
+
+2. eg_2 (깊이 있는 리스트)
+```python
+a = [1, 2, [99, 100]]
+b = list(a)
+b[2][1] = 1000
+
+print(a)
+print(b)
+```
+```
+[1, 2, [99, 1000]]
+[1, 2, [99, 1000]]
+```
+
+- `copy_list`를 변경해도 `origin_list`는 불변
+1. eg_1
+```python
+a = [1, 2, 3]
+b = list(a)
+
+b[0] = 100
+
+print(a)
+print(b)
+```
+```
+[1, 2, 3]
+[100, 2, 3]
+```
+
+2. eg_2
+```python
+a = [1, 2, 3]
+b = a[:] # a를 처음부터 끝까지 다 쪼개서 리스트로 만듦. 결국 그대로 할당한다는 의미. 
+
+b[0] = 100
+
+print(a)
+print(b)
+```
+```
+[1, 2, 3]
+[100, 2, 3]
+```
+
+3. eg_3 (깊이 있는 리스트의 독립적인 복사)
+```python
+import copy
+a = [1, 2, [99, 100]]
+b = copy.deepcopy(a)
+
+b[2][1] = 1000
+
+print(a)
+print(b)
+```
+```
+[1, 2, [99, 100]]
+[1, 2, [99, 1000]]
+```
 
 9. list comprehension
+- 리스트를 만드는 기능. (리스트 안에 for문을 넣어버리는 방식)
+- 권장하지 않으나, 타인의 코드 파악 목적으로 숙지.
+
+```python
+# 1. for문 이용
+
+numbers = [1, 2, 3, 4, 5]
+result = []
+
+for number in numbers:
+    result.append(number ** 3)
+print(result)
+
+# 2. list comprehension 이용
+numbers = [1, 2, 3, 4, 5]
+
+result2 = [number ** 3 for number in numbers]
+print(result2)
+```
+```
+[1, 8, 27, 64, 125]
+[1, 8, 27, 64, 125]
+```
+
+- 예제_1: 짝수만 고르기
+```python
+# 1. for문 이용
+numbers = range(1, 11)
+
+even_list = []
+for number in numbers:
+    if number % 2 == 0:
+        even_list.append(number)
+        
+print(even_list)
+
+# 2. list comprehension 이용
+even_list2 = [number for number in numbers if number % 2 == 0]
+print(even_list2)
+```
+```
+[2, 4, 6, 8, 10]
+[2, 4, 6, 8, 10]
+```
+
+- 예제_2: 모음만 제하기
+```python
+words = 'my name is hong'
+vowels = 'aeiou'
+
+# 1. for문 이용
+result = []
+for word in words:
+    if word not in vowels:
+        result.append(word)
+print(result)
+print(''.join(result))
+
+# 2. list comprehension 이용
+result2 = [word for word in words if word not in vowels]
+print(result2)
+print(''.join(result2))
+
+# 3. replace 이용
+for vowel in vowels:
+    words = words.replace(vowel, '')
+print(words)
+```
+
+```
+['m', 'y', ' ', 'n', 'm', ' ', 's', ' ', 'h', 'n', 'g']
+my nm s hng
+
+['m', 'y', ' ', 'n', 'm', ' ', 's', ' ', 'h', 'n', 'g']
+my nm s hng
+
+my nm s hng
+```
+
 
 ## 1.3 딕셔너리 메소드
+- 단순 밸류 변경
+```python
+info = {
+    'name': 'choi',
+    'location': 'incheon',
+}
+print(info['name'])
+
+info['name'] = 'kim'
+print(info)
+```
+```
+choi
+{'name': 'kim', 'location': 'incheon'}
+```
+
 1. `.pop(key[, default])`
+```python
+info = {
+    'name': 'choi',
+    'location': 'incheon',
+}
+
+print(info.pop('location'))
+```
+```
+incheon
+```
+
 2. `.update()`
 3. `.get(key[, default])`
 4. dictionary comprehension
@@ -433,6 +616,5 @@ None
 
 # 2. 기타 함수
 ## 2.1 map
-
 ## 2.2 filter
 ## 2.3 zip
