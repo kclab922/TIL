@@ -293,15 +293,129 @@ print('wooooow'.count('o'))
 
 
 ## 1.2 리스트 메소드
+
 1. `.append(x)`
+- 리스트 안에 새로운 데이터 집어넣기
+- 데이터 원본 자체를 바꿔주므로, 메소드 출력시 리턴은 `None`
+```python
+numbers = [1, 5, 2, 6, 2, 1]
+print(numbers.append(10))
+print(numbers)
+```
+```
+None
+[1, 5, 2, 6, 2, 1, 10]
+```
+
 2. `.extend(iterable)`
+- 괄호 안에 iterable(반복가능한) 객체를 넣어야 함
+- 데이터 원본 자체를 바꿔주므로, 메소드 출력시 리턴은 `None`
+```python
+numbers = [1, 5, 2, 6, 2, 1]
+a = [99, 100]
+print(numbers.extend(a))
+print(numbers)
+print(numbers + a)
+```
+```
+None
+[1, 5, 2, 6, 2, 1, 99, 100]
+[1, 5, 2, 6, 2, 1, 99, 100, 99, 100]
+```
+
 3. `.insert(idx, x)`
+- idx번째 자리에 x를 삽입
+- 데이터 원본 자체를 바꿔주므로, 메소드 출력시 리턴은 `None`
+```python
+numbers = [1, 5, 2, 6, 2, 1]
+print(numbers.insert(3, 3.5))
+print(numbers)
+```
+```
+None
+[1, 5, 2, 3.5, 6, 2, 1]
+```
+
 4. `.remove(x)`
+- 원본 데이터에 x가 없으면 에러 발생
+- 데이터 원본 자체를 바꿔주므로, 메소드 출력시 리턴은 `None`
+```python
+numbers = [1, 5, 2, 6, 2, 1]
+print(numbers.remove(6))
+print(numbers)
+```
+```
+None
+[1, 5, 2, 2, 1]
+```
+
 5. `.pop()`
+- 괄호 공란: 마지막 데이터 하나 빼내기
+- 괄호 내 인덱스 기입: idx번째 숫자 빼내기
+- 데이터 원본 자체를 바꿔주며, 메소드 출력시 리턴은 '어떤 데이터를 빼냈는지' 도출
+```python
+numbers = [1, 2, 3, 4, 5]
+
+print(numbers.pop()) 
+print(numbers)
+
+print(numbers.pop(0)) 
+print(numbers)
+```
+```
+5
+[1, 2, 3, 4]
+1
+[2, 3, 4]
+```
+
 6. `.sort()`
-    - cf. `sorted`
+- 정렬
+- 데이터 원본 자체를 바꿔주므로, 메소드 출력시 리턴은 `None`
+```python
+numbers = [1, 6, 2, 1, 3, 2, 7, 10]
+
+# 오름차순 정렬
+print(numbers.sort())
+print(numbers)
+
+# 내림차순 정렬
+print(numbers.sort(reverse = True))
+print(numbers)
+```
+```
+None
+[1, 1, 2, 2, 3, 6, 7, 10]
+None
+[10, 7, 6, 3, 2, 2, 1, 1]
+```
+- cf. `sorted`: 데이터 원본은 바꾸지 못하나, 함수 출력시 리턴되는 결과가 있음
+```python
+numbers = [1, 6, 2, 1, 3, 2, 7, 10]
+print(sorted(numbers))
+print(numbers)
+```
+```
+[1, 1, 2, 2, 3, 6, 7, 10]
+[1, 6, 2, 1, 3, 2, 7, 10]
+```
+
 7. `.reverse()`
+- 역순 (정렬해주지는 않음)
+```python
+numbers = [1, 6, 2, 1, 3, 2, 7, 10]
+print(numbers.reverse())
+print(numbers)
+```
+```
+None
+[10, 7, 2, 3, 1, 2, 6, 1]
+```
+
 8. list copy
+
+
+
 9. list comprehension
 
 ## 1.3 딕셔너리 메소드
