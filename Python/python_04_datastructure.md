@@ -209,6 +209,7 @@ hihihihihihello
 
 7. `.replace(old, new[, count])`
 - 데이터를 바꿔줌 (string은 immutable 하므로 원본 데이터는 그대로)
+- 찾고 있는 데이터 x가 없으면? 결과값은 -1
 ```python
 a = 'woooooooooow'
 print(a.replace('o', '!'))
@@ -227,7 +228,7 @@ woooooooooow
 a = 'apple'
 print(a.find('a'))
 print(a.find('p'))
-print(a.find('z')) # 찾고 있는 데이터 x가 없으면? 결과값은 -1
+print(a.find('z')) 
 ```
 ```
 0
@@ -250,8 +251,45 @@ for i in range(len(a)):
 
 
 9. `.index(x)`
+- 데이터 x가 가장 처음 등장하는 인덱스의 위치를 찾아줌 
+- 찾고 있는 데이터 x가 없으면? 결과값은 에러
+
+```python
+a = 'apple'
+print(a.index('a'))
+print(a.index('p'))
+print(a.index('z'))
+```
+```
+0
+1
+ValueError: substring not found
+```
+
 10. `.split(x)`
+- 기본적으로 문자열 간 공백을 기준하여 쪼갠 후, 각 파편을 리스트화 
+- 공백이 아닌 특정 기준점으로 쪼개려면 x자리에 기준점 넣을 것
+
+```python
+a = 'my name is'
+print(a.split())
+
+b = 'my_name_is'
+print(b.split('_'))
+```
+```
+['my', 'name', 'is']
+['my', 'name', 'is']
+```
+
 11. `.count(x)`
+- `x`가 몇 개인지 세어 줌 
+```python
+print('wooooow'.count('o'))
+```
+```
+5
+```
 
 
 ## 1.2 리스트 메소드
