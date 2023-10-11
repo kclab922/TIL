@@ -1,6 +1,6 @@
 # Python_intro
 
-## 0. 목차
+# 목차
 1. 변수 (데이터 타입)
     1. Number
     2. Boolean
