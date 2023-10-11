@@ -816,4 +816,56 @@ print(numbers)
 ```
 
 ## 2.2 filter
+- 형식: filter(function, iterable)
+- 의미: 함수를 객체에 적용하여 결과값이 True인 데이터만 추출
+- filter에 들어가는 function은 반드시 T/F를 반환해야 함 
+```python
+# 홀수여부 구분하는 함수 제작
+def is_odd(x):
+    if x % 2 == 1:
+        return True
+    else:
+        return False   # return bool(x % 2)도 가능
+print(is_odd(5))
+print(is_odd(10))
+
+# 1. for문 및 위 함수 이용하여 홀수 추출
+numbers = [1, 2, 3, 4, 5]
+result = []
+for number in numbers:
+    if is_odd(number):
+        result.append(number)
+print(result)
+
+# 2. filter 및 위 함수 이용하여 홀수 추출
+numbers = [1, 2, 3, 4, 5]
+result2 = filter(is_odd, numbers)
+print(result2) # lazy한 함수이므로 바로 출력 안 됨. 아래처럼 리스트로 바꿔줘야
+print(list(result2))
+```
+```
+True
+False
+
+[1, 3, 5]
+
+<filter object at 0x0000020C225E7B80>
+[1, 3, 5]
+```
+
 ## 2.3 zip
+- 형식: zip(x, y)
+- 의미: x의 데이터와 y의 데이터를 짝지어서 데이터 zip을 만들어 줌.
+- a와 b의 개수가 맞아야 함. (개수가 안 맞으면 적은 것을 기준으로 합쳐짐)
+```python
+a = [1, 2, 3]
+b = [100, 200, 300]
+result = zip(a, b)
+
+print(result) # lazy한 함수이므로 바로 출력 안 됨. 아래처럼 리스트로 바꿔줘야
+print(list(result))
+```
+```
+<zip object at 0x0000020C22601B40>
+[(1, 100), (2, 200), (3, 300)]
+```
