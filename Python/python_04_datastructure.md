@@ -591,30 +591,229 @@ choi
 ```
 
 1. `.pop(key[, default])`
+- 특정 키와 밸류값 모두 제거
 ```python
 info = {
     'name': 'choi',
     'location': 'incheon',
 }
 
+print(info)
 print(info.pop('location'))
+print(info)
 ```
 ```
+{'name': 'choi', 'location': 'incheon'}
 incheon
+{'name': 'choi'}
 ```
 
 2. `.update()`
+- 수정
+```python
+info = {
+    'name': 'choi',
+    'location': 'incheon',
+}
+
+print(info.update(name = 'park'))
+print(info)
+```
+```
+None
+{'name': 'park', 'location': 'incheon'}
+```
+
 3. `.get(key[, default])`
+- 가져오기.
+- 해당하는 키가 없으면 디폴트값 출력.
+- 빈출 ★
+```python
+info = {
+    'name': 'choi',
+    'location': 'incheon',
+}
+
+print(info.get('name'))
+print(info.get('phone'))
+print(info.get('phone', '해당 키가 없습니다.'))
+```
+```
+choi
+None
+해당 키가 없습니다.
+```
+
 4. dictionary comprehension
+
+- 예제_1
+    - {1: 1, 2: 8, 3: 9, ...} 도출하기
+```python
+# 1. for문 이용
+result = {}
+numbers = range(1, 11)
+
+for number in numbers:
+    result[number] = number ** 3
+
+print(result)
+
+# 2. dictionary comprehension
+result2 = {number: number ** 3 for number in range(1, 11)}
+print(result2)
+```
+```
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343, 8: 512, 9: 729, 10: 1000}
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343, 8: 512, 9: 729, 10: 1000}
+```
+
+- 예제_2
+    - 밸류값 50 이상인 키와 밸류만 추출하기
+```python
+dust = {
+    '서울': 100,
+    '대구': 30,
+    '부산': 50,
+    '광주': 80,
+    '제주': 20,
+}
+
+# 1. for문 이용
+result = {}
+for k, v in dust.items():
+    if v >= 50:
+        result[k] = v
+print(result)
+
+# 2. dictionary comprehension
+result2 = {k: v for k, v in dust.items() if v >= 50}
+print(result2)
+
+# 3. dictionary comprehension 응용
+result3 = {k: '나쁨' for k, v in dust.items() if v >= 50}
+print(result3)
+```
+```
+{'서울': 100, '부산': 50, '광주': 80}
+{'서울': 100, '부산': 50, '광주': 80}
+{'서울': '나쁨', '부산': '나쁨', '광주': '나쁨'}
+```
 
 
 ## 1.4 세트 메소드
-1. `.add(x)`
+- 세트: 집합 형태의 자료구조
+
+
+1. `.add(x)`: 
+- 세트는 데이터가 중복 존재할 수 없으므로, 같은 데이터를 두 번 추가해도 결과값은 그대로.
+```python
+fruits = {'apple', 'banana', 'melon'}
+
+print(fruits.add('watermelon'))
+print(fruits)
+print(fruits.add('watermelon'))
+print(fruits)
+```
+```
+None
+{'apple', 'banana', 'watermelon', 'melon'}
+None
+{'apple', 'banana', 'watermelon', 'melon'}
+```
+
 2. `.update({set})`
+```python
+fruits = {'apple', 'banana', 'melon'}
+
+print(fruits.update({'grape', 'orange'}))
+print(fruits)
+```
+```
+None
+{'grape', 'apple', 'banana', 'orange', 'melon'}
+```
+
 3. `.remove(x)`
+```python
+fruits = {'apple', 'banana', 'melon'}
+
+print(fruits.remove('banana'))
+print(fruits)
+```
+```
+None
+{'apple', 'melon'}
+```
+
 4. `.pop()`
+- 여러 번 실행하면 랜덤(내부적으로 설정된 순서)으로 하나씩 지워짐.
+```python
+fruits = {'apple', 'banana', 'melon'}
+
+print(fruits.pop())
+print(fruits)
+```
+```
+apple
+{'melon', 'banana'}
+```
+
 
 # 2. 기타 함수
+- 메소드가 아니라 함수.
+
 ## 2.1 map
+- 각 데이터에 특정 함수를 적용시킬 때 사용.
+- map(function, iterable)
+- map(함수, 시퀀스형의 반복가능한 객체)
+- map(적용시킬 함수, 적용대상 값)
+- map으로 바꾼 다음 반드시 list로 바꿔줘야 함.
+
+```python
+a = [1, 2, 3]
+number_str = map(str, a)
+
+print(number_str)
+print(list(number_str))
+```
+```
+<map object at 0x00000277502294B0>
+['1', '2', '3']
+```
+
+- 예제_1_세제곱 도출하기
+```python
+a = [1, 2, 3]
+
+# 1. for문 이용
+result = []
+for number in a:
+    result.append(number ** 3)
+
+print(result)
+
+# 2. map함수 이용
+def cube(x):
+    return x ** 3
+
+result2 = map(cube, a)
+print(list(result2))
+```
+```
+[1, 8, 27]
+[1, 8, 27]
+```
+
+- 예제_2
+```python
+a = '1 3 5 7 9'
+numbers = list(map(int, a.split()))
+# a라는 함수를 ()빈칸을 기준으로 쪼개고 + int로 바꾼 후 + list로 만들어줌.
+print(numbers)
+```
+```
+[1, 3, 5, 7, 9]
+```
+
 ## 2.2 filter
 ## 2.3 zip
