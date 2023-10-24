@@ -71,3 +71,19 @@ git config --global user.name <이름>
 
 
     ## 코드 공유하기
+
+
+
+    ## vscode에서 파일상태
+    - `U`: untrack
+    - `A`: add 됨
+
+    
+    ## vscode 명령어
+    - `git status`
+    - `git log`: 전체 커밋 내역
+    - `git log -n`: 최근 n개 커밋만 보기  
+    - `git log--oneline` : 각 커밋을 한 줄 요약해서 전체 커밋 내역 
+    - `git restore README.md`: 수정 전 저장해둔 커밋상태로 돌아가는 명령어
+    - `git commit --amend` : 커밋한 것을 수정할 때 사용 (ex.커밋메시지 변경시) 
+                            > 이미 push까지 했다면 사용 불가한 명령어
