@@ -5,9 +5,10 @@
 
 ---
 
+- Algorithm
 - Git
-- Linux
+- Jupyter_Lab
 - Markdown
-- Bootstrap
+- Python
 
 
