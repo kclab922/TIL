@@ -26,8 +26,8 @@ git config --global user.name <이름>
 ## git 상태 체크 
 
 - `status`
-    - `git status`
-    - 현재 git으로 관리되고 있는 파일/폴더의 상태를 출력
+    - `git status`: 현재 git으로 관리되고 있는 파일/폴더의 상태를 출력
+    - `git log`: 커밋 내역
 
 
 ## 코드 수정하고 저장소에 저장하기
@@ -70,11 +70,16 @@ git config --global user.name <이름>
     - 폴더 들어가서 생성된 파일로 VSCode 열기 
 
 - `fork`
-    pull ???
+    - 상대방의 원격저장소에 들어가 `Fork`하기
 
+## 코드 공유하기
+- 상대방의 원격저장소에 들어가 `Fork`하기
+- 만들어진 내 원격저장소에 들어가 `clone`하여 폴더 생성
+- 폴더에서 vscode 실행 후 작업
+- `add, commit, push`
+- 상대방의 원격저장소에 들어가 `Pull Request` 클릭
 
-    ## 코드 공유하기
-
+-- `git stash` - `git stash pop` : 작업하던 것 잠시 보관
 
 
     ## vscode에서 파일상태
@@ -102,3 +107,8 @@ git config --global user.name <이름>
         - 브렌치로 이동 `git checkout <브렌치 이름>`
         - 브렌치 병합: `git merge <브렌치 이름>`
         - 브렌치 삭제 `git barnch -d <브렌치 이름>`
+
+    ## `commit`은 새로운 버전을 만드는 것이므로 중요.
+    - `restore`: 작업중인 내용 날리고 최신 커밋된 내용으로 돌아가기
+    - `reset`: 커밋 버전 자체를 삭제 (커밋을 잘못 썼을 때). 삭제 후 되돌리기 어려우므로 주의요망.
+    - `revert`: 커밋을 되돌림. 되돌렸다는 커밋을 새로 생성
