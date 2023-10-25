@@ -90,3 +90,14 @@ git config --global user.name <이름>
     - `git restore README.md`: 수정 전 저장해둔 커밋상태로 돌아가는 명령어
     - `git commit --amend` : 커밋한 것을 수정할 때 사용 (ex.커밋메시지 변경시) 
                             > 이미 push까지 했다면 사용 불가한 명령어
+
+    ## 브랜치 쓰는법
+    1. 작업 전 브랜치를 만든다.   
+    2. 브랜치에서 개발을 하고, 완료되면 커밋한다.
+    3. 개발이 완료되면 원하는 브랜치에 병합시킨다. 
+    - 로컬: master에 병합
+    - GitHub으로 pull request를 보내고, merge를 GitHub에서 하는 작업흐름
+    - 명령어
+        - 브렌치 만들기 `git branch <브렌치 이름>`
+        - 브렌치로 이동 `git checkout <브렌치 이름>`
+        - 브렌치 삭제 `git barnch -d <브렌치 이름`
