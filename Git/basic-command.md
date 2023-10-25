@@ -98,6 +98,7 @@ git config --global user.name <이름>
     - 로컬: master에 병합
     - GitHub으로 pull request를 보내고, merge를 GitHub에서 하는 작업흐름
     - 명령어
-        - 브렌치 만들기 `git branch <브렌치 이름>`
+        - 브렌치 만들기 `git checkout -b <브렌치 이름>`
         - 브렌치로 이동 `git checkout <브렌치 이름>`
-        - 브렌치 삭제 `git barnch -d <브렌치 이름`
+        - 브렌치 병합: `git merge <브렌치 이름>`
+        - 브렌치 삭제 `git barnch -d <브렌치 이름>`
