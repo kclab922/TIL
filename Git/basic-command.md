@@ -124,5 +124,5 @@ git config --global user.name <이름>
 5. 작업루틴
 - github 최신데이터 가져오기: `git switch master` >> `git pull origin master` >> `git switch <내 저장소명>` >> `git merge master`
 - 작업 진행
-- 작업 후 `git switch <내 저장소명>` >> `add commit push`
+- 작업 후 `git switch <내 저장소명>` >> `add/commit/push`
 - github 창에서 pull request 및 merge 
