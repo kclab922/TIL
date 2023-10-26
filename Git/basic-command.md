@@ -112,3 +112,17 @@ git config --global user.name <이름>
     - `restore`: 작업중인 내용 날리고 최신 커밋된 내용으로 돌아가기
     - `reset`: 커밋 버전 자체를 삭제 (커밋을 잘못 썼을 때). 삭제 후 되돌리기 어려우므로 주의요망.
     - `revert`: 커밋을 되돌림. 되돌렸다는 커밋을 새로 생성
+
+
+## git 으로 협업하기
+1. 조장: organization 생성 및 조원 초대
+2. 조장: repository 생성하고 기본 폴더구조 만든 후 add commit push / 조원들 role owner로 변경
+3. 조원: code 에서 git clone
+4. 다같이
+- clone한 폴더에서 vscode 열기
+- 브랜치 생성 및 스위치: `git branch -c <내 저장소명>` >> `git switch <내 저장소명>`
+5. 작업루틴
+- github 최신데이터 가져오기: `git switch master` >> `git pull origin master` >> `git switch <내 저장소명>` >> `git merge master`
+- 작업 진행
+- 작업 후 `git switch <내 저장소명>` >> `add commit push`
+- github 창에서 pull request 및 merge 
